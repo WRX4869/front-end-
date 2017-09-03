@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>practise1</title>
+    <meta charset="utf-8">
+
+    <script>
+        function buttonClick() {
+            var button = document.getElementById("button");
+            button.onclick = change;
+        }
+        function change() {
+            //var parent = document.getElementById("back-ground");
+            //var child = document.getElementById("slogan");
+            //parent.removeChild(child);
+            document.getElementById("back-ground").removeChild(document.getElementById("slogan"));
+
+            var para = document.createElement("h2");
+            var node = document.createTextNode("标语1");
+            para.appendChild(node);
+        
+
+            var element = document.getElementById("back-ground");
+            var child = document.getElementById("author");
+            element.insertBefore(para, child);
+        }
+        window.onload = buttonClick;
+    </script>
+</head>
+
+<body>
+    <style>
+        .a1-background {
+            background-color: grey;
+        }
+
+        .a2-background {
+            background-color: yellow;
+        }
+    </style>
+    <div id="back-ground" class="a1-background">
+        <h2 id="slogan">标语0</h2>
+        <p id="author">作者0</p>
+        <button id="button" class="btn">下一个</button>
+    </div>

@@ -1,0 +1,38 @@
+if(fido.weight<25){
+    alert("WOOF");
+}wlse{
+    alert("yip");
+}
+
+var breed=fido["breed"];//使用对象以及用引号和中括号包围的属性名来访问这个属性的值，例 fido["weight"]
+if(breed=="mixed"){
+alert("Best in show");
+}
+
+fido.weight=27;//改变重量
+fido.breed="Chawalla/Great Dane mix";//改变品种
+fido.loves.push("chewing bones");//使用push将新元素压入数组末尾
+
+var prop;
+for (prop in fido){ //for(variable in object)以任意顺序遍历一个对象的可枚举属性。
+    alert("Fido has a "+ prop+"property");
+    if(prop=="name"){
+        alert("This is "+fido[prop]);
+    }
+}
+
+var likes=fido.loves;
+var likesString="fido likes";
+for (var i=0;i<likes.length;i++){
+    likesString+=" "+likes[i];
+}
+alert(likesString);
+
+function bark(dog){
+    if(dog.weight>25){
+        alert("WOOF");
+    }else{
+        alert("yip");
+    }
+}
+bark(fido);//将fido作为argument传入函数。

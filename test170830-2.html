@@ -1,0 +1,22 @@
+var avatar="generic";
+var skill=1.0;
+var pointPerLevel=1000;
+var userPoints=2008;
+function getAvatar(points){
+    var level = points/pointsPerLevel;
+    if(level==0){
+        return"Teddy bear";
+    }else if(level==1){
+        return"Cat";
+    }else if(level>=2){
+        return "Gorilla";
+    }
+}
+function updatePoints(bonus,newPoints){
+    for(var i=0;i<bonus;i++){
+        newPoint += skill*bonus;
+    }
+    return newPoints+userPoints;
+}
+userPoints=updatePoints(2,100);
+avatar=getAvatar(2112);
