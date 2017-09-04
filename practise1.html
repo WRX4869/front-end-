@@ -5,44 +5,46 @@
     <title>practise1</title>
     <meta charset="utf-8">
     <style>
-        .a1-background {
-            background-color: grey;
+        body{
+            background-color: black;
+        }
+        .background {
+            background-color: white;
         }
 
-        .a2-background {
-            background-color: yellow;
-        }
-
-        .divCenter {
+        .div-center {
             text-align: center;/*水平居中*/
-            margin: 100px;
+            margin: 200px;/*外边距*/
             border-radius: 3px;
             padding-top: 10px;
-            padding-bottom: 10px;
-            padding-right:1px;
+            padding-bottom: 5px;
+            padding-right: 1px;
+            padding-left:1px;
+            word-wrap: break-word;/*自动换行 normal浏览器默认 break-word在长单词或URL地址内部换行*/
+            word-break: break-all;/*normal浏览器默认 break-all允许单词间换行 keep-all只能在半角空格或连字符处换行*/
         }
 
-        .divRight {
+        .div-right {
             text-align: right;
             margin: 50px;
-            padding-right:10px;
+            padding-right: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div id="divcss5" class="divCenter a1-background">
-        <h2 id="slogan">标语00000000000000000000000000000000000000000000</h2>
-        <div id="divcss5" class="divRight a1-background">
-            <p id="author">-作者00000000</p>
-            <button id="button" class="btn">下一个</button>
+    <div id="around" class="div-center background">
+        <h2 id="slogan">标语000000000000000000000000000000000000000000000000000000</h2>
+        <div id="inside" class="div-right background">
+            <p id="author">-作者</p>
+            <button id="button" class="btn">Change</button>
         </div>
     </div>
 
     <script>
         function changeSlogan() {
-            var sloganArray = ["标语0","标语1", "标语2", "标语3", "标语4", "标语5", "标语6","7"];
-            var authorArray = ["-作者0","-作者1", "-作者2", "-作者3", "-作者4", "-作者5", "-作者6","779"];
+            var sloganArray = ["标语0", "标语1", "标语2", "标语3", "标语4", "标语5", "标语6", "标语7"];
+            var authorArray = ["-作者0", "-作者1", "-作者2", "-作者3", "-作者4", "-作者5", "-作者6", "-作者7"];
             var random = Math.floor(Math.random() * sloganArray.length);
             var randomSlogan = sloganArray[random];
             var randomAuthor = authorArray[random];
