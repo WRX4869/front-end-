@@ -12,31 +12,49 @@
         .a2-background {
             background-color: yellow;
         }
+
+        .divCenter {
+            text-align: center;/*水平居中*/
+            margin: 100px;
+            border-radius: 3px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right:1px;
+        }
+
+        .divRight {
+            text-align: right;
+            margin: 50px;
+            padding-right:10px;
+        }
     </style>
 </head>
 
 <body>
-    <div id="back-ground" class="a1-background">
-        <h2 id="slogan">标语0</h2>
-        <p id="author">-作者0</p>
-        <button id="button" class="btn">下一个</button>
+    <div id="divcss5" class="divCenter a1-background">
+        <h2 id="slogan">标语00000000000000000000000000000000000000000000000000000000000</h2>
+        <div id="divcss5" class="divRight a1-background">
+            <p id="author">-作者00000000</p>
+            <button id="button" class="btn">下一个</button>
+        </div>
     </div>
 
     <script>
         function changeSlogan() {
-            var sloganArray=["标语1","标语2","标语3","标语4","标语5","标语6"];
-            var authorArray=["-作者1","-作者2","-作者3","-作者4","-作者5","-作者6"];
-            var random=Math.floor(Math.random()*sloganArray.length);
-            var randomSlogan=sloganArray[random];
-            var randomAuthor=authorArray[random];
+            var sloganArray = ["标语0","标语1", "标语2", "标语3", "标语4", "标语5", "标语6"];
+            var authorArray = ["-作者0","-作者1", "-作者2", "-作者3", "-作者4", "-作者5", "-作者6"];
+            var random = Math.floor(Math.random() * sloganArray.length);
+            var randomSlogan = sloganArray[random];
+            var randomAuthor = authorArray[random];
             var slogan = document.getElementById("slogan");
-            var author=document.getElementById("author");
+            var author = document.getElementById("author");
             slogan.innerText = randomSlogan;//innerText与innerHTML后者包括了HTML标签
-            author.innerText=randomAuthor;
+            author.innerText = randomAuthor;
         }
 
         var button = document.getElementById("button");
         button.addEventListener('click', changeSlogan);//同一元素添加多次同一事件
     </script>
 </body>
+
 </html>
