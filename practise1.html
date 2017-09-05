@@ -23,6 +23,7 @@
             /*自动换行 normal浏览器默认 break-word在长单词或URL地址内部换行*/
             word-break: break-all;
             /*normal浏览器默认 break-all允许单词间换行 keep-all只能在半角空格或连字符处换行*/
+            color:grey;
         }
 
         .div-right {
@@ -53,14 +54,16 @@
             slogan.innerText = randomSlogan;//innerText与innerHTML后者包括了HTML标签
             var author = document.getElementById("author");
             author.innerText = randomAuthor;
+
             var colorArray = ["#CCC", "#99C","#C99","#966","#033"];
             var random2 = Math.floor(Math.random() * colorArray.length);
             var background = document.getElementById("background");
-            background.style.backgroundColor = colorArray[random];//更改style
+            background.style.backgroundColor = colorArray[random2];//更改style
+            slogan.style.color=colorArray[random2];
+            author.style.color=colorArray[random2];gai
         }
         var button = document.getElementById("button");
         button.addEventListener('click', changeSlogan);//同一元素添加多次同一事件
-
     </script>
 </body>
 
