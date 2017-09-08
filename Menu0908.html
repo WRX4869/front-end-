@@ -10,79 +10,92 @@
             padding: 0px;
         }
 
-        #main {
-            background-color: grey;
-            width: 400px;
+        .main {
+            background-color: #d2a179;
+            width: 330px;
             height: 30px;
             margin: 0 auto;
         }
 
-        ul li {
-            position: static;
-            float: left;
+        .li1 {
             list-style: none;
-            height: 30px;
+            line-height: 30px;
+            float: left;
             text-align: center;
-            padding: 10px;
+            color: #6B2624;
+            width: 100px;
         }
 
         a {
             text-decoration: none;
-            color: black;
+            color: #6B2624;
             display: block;
-            width: 100px;
+            padding: 0 5px;
         }
 
         a:hover {
-            color: white;
-            background-color: black;
+            color: #d2a179;
+            background-color: #6B2624;
         }
 
-        ul li ul li {
+        .li2 {
             display: none;
-            float: none;
-            margin-top: 1px;
+            margin-top: 5px;
+            position: relative;
+            color: #6B2624;
+            background-color: white;
         }
 
-        ul li ul {
-            list-style: none;
+        .li1:hover ul li {
+            display: block;
         }
 
-        ul li:hover ul li{
+        .ul3 {
+            display: none;
+            position: absolute;
+            margin-top: 5px;
+            top: -5px;
+            left: 100px;
+            padding: 0 5px;
+            width: 100px;
+        }
+
+        .li2:hover ul {
             display: block;
         }
     </style>
 </head>
 
 <body>
-    <div id="main">
-        <ul>
-            <li><a href="#">HTML5</a>
-                <ul>
-                    <li>I</li>
-                    <li>Know</li>
-                    <li>Nothing</li>
+    <div class="main">
+        <ul class="ul1">
+            <li class="li1"><a href="#">HTML5</a>
+                <ul class="ul2">
+                    <li class="li2"><a href="#">I</a></li>
+                    <li class="li2"><a href="#">Know</a></li>
+                    <li class="li2"><a href="#">Nothing</a></li>
                 </ul>
             </li>
-            <li><a href="#">CSS</a>
-                <ul>
-                    <li>I</li>
-                    <li>Know</li>
-                    <li>Nothing</li>
+            <li class="li1"><a href="#">CSS</a>
+                <ul class="ul2">
+                    <li class="li2"><a href="#">I</a></li>
+                    <li class="li2"><a href="#">Know</a></li>
+                    <li class="li2"><a href="#">Nothing</a></li>
                 </ul>
             </li>
-            <li><a href="#">JavaScript</a>
-                <ul>
-                    <li>I</li>
-                </ul>
-                <ul>
-                    <li>Know</li>
-                </ul>
-                <ul>
-                    <li>Nothing</li>
-                </ul>
-                <ul>
-                    <li>Too</li>
+            <li class="li1"><a href="#">JavaScript</a>
+                <ul class="ul2">
+                    <li class="li2"><a href="#">I</a></li>
+                    <li class="li2"><a href="#">Know</a></li>
+                    <li class="li2"><a href="#">Nothing</a></li>
+                    <li class="li2"><a href="#">Too</a>
+                        <ul class="ul3">
+                            <li><a href="#">?</a></li>
+                            <li><a href="#">?</a></li>
+                            <li><a href="#">?</a></li>
+                            <li><a href="#">?</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
 
