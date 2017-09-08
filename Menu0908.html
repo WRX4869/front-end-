@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #main{
+            background-color: grey;
+            width:400px;
+            height:30px;
+            margin:0 auto;
+        }
+
+        ul li{
+            position:static;
+            float:left;
+            list-style:none;
+            height:30px;
+            text-align:center;
+            padding:10px;
+        }
+
+        a{
+            text-decoration: none;
+            color:black;
+            display:block;
+            width:100px;
+        }
+
+        a:hover{
+            color:white;
+            background-color: black;
+        }
+
+        ul li ul li{
+            display:none;
+        }
+
+        ul li ul {
+            list-style:none;
+        }
+
+        ul li a:hover{
+            display:block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <ul>
+            <li><a href="#">HTML5</a>
+                <ul><li>I</li></ul>
+                <ul><li>Know</li></ul>
+                <ul><li>Nothing</li></ul>
+            </li>
+            <li><a href="#">CSS</a>
+                    <ul><li>I</li></ul>
+                    <ul><li>Know</li></ul>
+                    <ul><li>Nothing</li></ul>
+            </li>
+            <li><a href="#">JavaScript</a>                
+                <ul><li>I</li></ul>
+                <ul><li>Know</li></ul>
+                <ul><li>Nothing</li></ul>
+                <ul><li>Too</li></ul>
+            </li>
+                
+        </ul>
+    </div>
+</body>
