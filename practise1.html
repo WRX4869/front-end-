@@ -10,20 +10,20 @@
         }
 
         .div-center {
-            text-align: center;
             /*水平居中*/
-            margin: 200px;
+            text-align: center;
             /*外边距*/
+            margin: 200px;
             border-radius: 3px;
             padding-top: 10px;
             padding-bottom: 5px;
             padding-right: 1px;
             padding-left: 1px;
-            word-wrap: break-word;
             /*自动换行 normal浏览器默认 break-word在长单词或URL地址内部换行*/
-            word-break: break-all;
+            word-wrap: break-word;
             /*normal浏览器默认 break-all允许单词间换行 keep-all只能在半角空格或连字符处换行*/
-            color:grey;
+            word-break: break-all;
+            color: grey;
         }
 
         .div-right {
@@ -34,11 +34,11 @@
     </style>
 </head>
 
-<body id="background" style="background-color:grey">
+<body id="background" style="background-color:grey" style=" transition: -webkit-transform 1000ms, opacity 800ms">
     <div id="around" class="div-center background">
-        <h2 id="slogan">标语000000000000000000000000000000000000000000000000000000</h2>
+        <h2 id="slogan">标语0</h2>
         <div id="inside" class="div-right background">
-            <p id="author">-作者</p>
+            <p id="author">-作者0</p>
             <button id="button" class="btn">Change</button>
         </div>
     </div>
@@ -55,12 +55,12 @@
             var author = document.getElementById("author");
             author.innerText = randomAuthor;
 
-            var colorArray = ["#CCC", "#99C","#C99","#966","#033"];
+            var colorArray = ["#CCC", "#99C", "#C99", "#966", "#033"];
             var random2 = Math.floor(Math.random() * colorArray.length);
             var background = document.getElementById("background");
             background.style.backgroundColor = colorArray[random2];//更改style
-            slogan.style.color=colorArray[random2];
-            author.style.color=colorArray[random2];
+            slogan.style.color = colorArray[random2];
+            author.style.color = colorArray[random2];
         }
         var button = document.getElementById("button");
         button.addEventListener('click', changeSlogan);//同一元素添加多次同一事件
