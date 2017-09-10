@@ -15,10 +15,11 @@
             transition: background-color 1s;
         }
 
-        #slogan, #author {
+        #slogan,
+        #author {
             -webkit-transition: color 1s;
             -moz-transition: color 1s;
-            transition: color 1s;  
+            transition: color 1s;
         }
 
         .div-center {
@@ -43,6 +44,19 @@
             margin: 50px;
             padding-right: 10px;
         }
+
+        .btn {
+            height: 38px;
+            padding: 0 30px;
+            background-color: grey;
+            border: none;
+            border-radius: 3px;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 
@@ -59,23 +73,25 @@
         var slogan = document.getElementById("slogan");
         var author = document.getElementById("author");
         var background = document.getElementById("background");
+        var btn = document.getElementById("button");
 
         function changeSlogan() {
-            var sloganArray = ["标语0", "标语1", "标语2", "标语3", "标语4", "标语5", "标语6", "标语7"];
-            var authorArray = ["-作者0", "-作者1", "-作者2", "-作者3", "-作者4", "-作者5", "-作者6", "-作者7"];
+            var sloganArray = [["标语0", "-作者0"], ["标语1", "-作者1"], ["标语2", "-作者2"], ["标语3", "-作者3"], ["标语4", "-作者4"], ["标语5", "-作者5"], ["标语6", "-作者6"]]
             var random = Math.floor(Math.random() * sloganArray.length);
-            slogan.innerText = sloganArray[random];//innerText与innerHTML后者包括了HTML标签
-            author.innerText = authorArray[random];
+            slogan.innerText = sloganArray[random][0];//innerText与innerHTML后者包括了HTML标签
+            author.innerText = sloganArray[random][1];
         }
         function changeColor() {
-            var colorArray = ["#CCC", "#99C","#C99","#966","#033"];
+            var colorArray = ["#CCC", "#99C", "#C99", "#966", "#033"];
             var random = Math.floor(Math.random() * colorArray.length);
             var randomColor = colorArray[random];
             background.style.backgroundColor = randomColor;//更改style
             slogan.style.color = randomColor;
             author.style.color = randomColor;
+            btn.style.backgroundColor = randomColor;
+
         }
-        
+
         var button = document.getElementById("button");
         button.addEventListener('click', changeSlogan);//同一元素添加多次同一事件
         button.addEventListener('click', changeColor);
