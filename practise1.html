@@ -9,20 +9,32 @@
             background-color: white;
         }
 
+        body {
+            -webkit-transition: background-color 1s;
+            -moz-transition: background-color 1s;
+            transition: background-color 1s;
+        }
+
+        #slogan, #author {
+            -webkit-transition: color 1s;
+            -moz-transition: color 1s;
+            transition: color 1s;  
+        }
+
         .div-center {
-            text-align: center;
             /*水平居中*/
-            margin: 200px;
+            text-align: center;
             /*外边距*/
+            margin: 200px;
             border-radius: 3px;
             padding-top: 10px;
             padding-bottom: 5px;
             padding-right: 1px;
             padding-left: 1px;
-            word-wrap: break-word;
             /*自动换行 normal浏览器默认 break-word在长单词或URL地址内部换行*/
-            word-break: break-all;
+            word-wrap: break-word;
             /*normal浏览器默认 break-all允许单词间换行 keep-all只能在半角空格或连字符处换行*/
+            word-break: break-all;
             color:grey;
         }
 
@@ -44,26 +56,29 @@
     </div>
 
     <script>
+        var slogan = document.getElementById("slogan");
+        var author = document.getElementById("author");
+        var background = document.getElementById("background");
+
         function changeSlogan() {
             var sloganArray = ["标语0", "标语1", "标语2", "标语3", "标语4", "标语5", "标语6", "标语7"];
             var authorArray = ["-作者0", "-作者1", "-作者2", "-作者3", "-作者4", "-作者5", "-作者6", "-作者7"];
             var random = Math.floor(Math.random() * sloganArray.length);
-            var randomSlogan = sloganArray[random];
-            var randomAuthor = authorArray[random];
-            var slogan = document.getElementById("slogan");
-            slogan.innerText = randomSlogan;//innerText与innerHTML后者包括了HTML标签
-            var author = document.getElementById("author");
-            author.innerText = randomAuthor;
-
-            var colorArray = ["#CCC", "#99C","#C99","#966","#033"];
-            var random2 = Math.floor(Math.random() * colorArray.length);
-            var background = document.getElementById("background");
-            background.style.backgroundColor = colorArray[random2];//更改style
-            slogan.style.color=colorArray[random2];
-            author.style.color=colorArray[random2];
+            slogan.innerText = sloganArray[random];//innerText与innerHTML后者包括了HTML标签
+            author.innerText = authorArray[random];
         }
+        function changeColor() {
+            var colorArray = ["#CCC", "#99C","#C99","#966","#033"];
+            var random = Math.floor(Math.random() * colorArray.length);
+            var randomColor = colorArray[random];
+            background.style.backgroundColor = randomColor;//更改style
+            slogan.style.color = randomColor;
+            author.style.color = randomColor;
+        }
+        
         var button = document.getElementById("button");
         button.addEventListener('click', changeSlogan);//同一元素添加多次同一事件
+        button.addEventListener('click', changeColor);
     </script>
 </body>
 
