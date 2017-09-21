@@ -1,8 +1,9 @@
-var array1 = [2, 3, 5, 7, 9];
-var array2 = ["spring", "summer", "autumn", "winter"];
-
-function arrayMergeAndDelete() {
+function arrayMergeAndDelete(array1, array2, index) {
     var newArray = array1.concat(array2);
-    newArray.splice(1, 1);
-    return newArray;
+    if (newArray.length > index + 1) {
+        newArray.splice(index, 1);
+        alert(newArray);
+    } else {
+        alert("The newArray is not long enough.");
+    }
 }
