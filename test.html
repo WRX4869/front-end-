@@ -10,20 +10,16 @@
     <script>
         function removeSpace(string) {
             var begin = 0;
-            do {
+            while (begin < string.length && string[begin] === ' ') {
                 begin++;
             }
-            while (begin < string.length, 'string'.charAt(begin) === '/0');
-            if ('string'.charAt(string.length - 1) === '/0') {
-                var end = -1;
-                do {
-                    end--;
-                }
-                while (string.length + end > 0, 'string'.charAt(string.length - 1 + end) === '/0');
+            var end = string.length - 1;
+            while (end > begin && string[end] === ' ') {
+                end--;
             }
-            newString = string.slice(begin, end);
+            newString = string.slice(begin, end + 1);
             return newString;
         }
-        alert(removeSpace('  a  a')); 
+        alert(removeSpace('    '));
     </script>
 </body>
