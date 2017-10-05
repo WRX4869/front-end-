@@ -8,18 +8,11 @@
 
 <body>
     <script>
-        function removeSpace(string) {
-            var begin = 0;
-            while (begin < string.length && string[begin] === ' ') {
-                begin++;
-            }
-            var end = string.length - 1;
-            while (end > begin && string[end] === ' ') {
-                end--;
-            }
-            newString = string.slice(begin, end + 1);
+        function addSpace(string) {
+            var array = string.split('');
+            newString=array.join(' ');
             return newString;
         }
-        alert(removeSpace('    '));
+        alert(addSpace('abcd'));
     </script>
 </body>
