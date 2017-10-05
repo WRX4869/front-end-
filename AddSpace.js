@@ -6,6 +6,6 @@ function addSpace(string) {
             newarray = array.splice(i + 1, 0, ' ');
         }
     */
-    newString = array.join(' ');
+    var newString = array.join(' ');
     return newString;
 }
