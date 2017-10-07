@@ -13,7 +13,6 @@ function removeSpace(string) {
 }
 
 function removeSpaceRegExp(string) {
-    let str1 = string.replace(/^(\s*)*&(\s*)*$/g,'');
-    let str2 = str1.replace(/(\s*)*$/g,'');
-    return str2;
+    let str1 = string.replace(/(^\s*|\s*$)/g,'');
+    return str1;
 }
