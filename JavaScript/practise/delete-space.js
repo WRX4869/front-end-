@@ -11,3 +11,9 @@ function removeSpace(string) {
     newString = string.slice(begin, end + 1);
     return newString;
 }
+
+function removeSpaceRegExp(string) {
+    let str1 = string.replace(/^(\s*)*&(\s*)*$/g,'');
+    let str2 = str1.replace(/(\s*)*$/g,'');
+    return str2;
+}
