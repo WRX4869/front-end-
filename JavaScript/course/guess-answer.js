@@ -1,4 +1,5 @@
-<script>
+/*head first h5 programming*/
+function guessAnswer() {
     var guessInput = document.getElementById("guess");
     var guess = guessInput.value;
     var answer = null;
@@ -12,6 +13,6 @@
     } else {
         answer = "Sorry, I was thinking of " + answers[index];
     }
-    alert(answer);
+}
+alert(answer);
 
-</script>
